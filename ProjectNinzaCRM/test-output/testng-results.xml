@@ -1,84 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[Campaign Banner117715 added successfully]]>
-    </line>
-    <line>
-      <![CDATA[campaign Banner115674 added successfully]]>
-    </line>
   </reporter-output>
-  <suite started-at="2025-03-29T21:05:42 IST" name="Default suite" finished-at="2025-03-29T21:06:27 IST" duration-ms="44782">
+  <suite started-at="2025-04-02T16:27:22 IST" name="Default suite" finished-at="2025-04-02T16:27:24 IST" duration-ms="1614">
     <groups>
     </groups>
-    <test started-at="2025-03-29T21:05:42 IST" name="Default test" finished-at="2025-03-29T21:06:27 IST" duration-ms="44782">
-      <class name="Basic.NinzaCRMWithTestngMethod">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:Basic.NinzaCRMWithTestngMethod@30c15d8b]" started-at="2025-03-29T21:05:42 IST" name="beforeSuite" finished-at="2025-03-29T21:05:42 IST" duration-ms="119" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Basic.NinzaCRMWithTestngMethod@30c15d8b]" started-at="2025-03-29T21:05:43 IST" name="beforeTest" finished-at="2025-03-29T21:05:43 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:Basic.NinzaCRMWithTestngMethod@30c15d8b]" started-at="2025-03-29T21:05:43 IST" name="beforeClass" finished-at="2025-03-29T21:05:47 IST" duration-ms="4634" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Basic.NinzaCRMWithTestngMethod@30c15d8b]" started-at="2025-03-29T21:05:47 IST" name="beforeMethod" finished-at="2025-03-29T21:05:52 IST" duration-ms="4496" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="createCampaignTest()[pri:0, instance:Basic.NinzaCRMWithTestngMethod@30c15d8b]" started-at="2025-03-29T21:05:52 IST" name="createCampaignTest" finished-at="2025-03-29T21:06:10 IST" duration-ms="18080" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[Campaign Banner117715 added successfully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- createCampaignTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Basic.NinzaCRMWithTestngMethod@30c15d8b]" started-at="2025-03-29T21:06:10 IST" name="afterMethod" finished-at="2025-03-29T21:06:10 IST" duration-ms="158" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Basic.NinzaCRMWithTestngMethod@30c15d8b]" started-at="2025-03-29T21:06:10 IST" name="beforeMethod" finished-at="2025-03-29T21:06:12 IST" duration-ms="1934" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="createCampaignWithDateTest()[pri:0, instance:Basic.NinzaCRMWithTestngMethod@30c15d8b]" started-at="2025-03-29T21:06:12 IST" name="createCampaignWithDateTest" finished-at="2025-03-29T21:06:26 IST" duration-ms="14053" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[campaign Banner115674 added successfully]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- createCampaignWithDateTest -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Basic.NinzaCRMWithTestngMethod@30c15d8b]" started-at="2025-03-29T21:06:26 IST" name="afterMethod" finished-at="2025-03-29T21:06:26 IST" duration-ms="195" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:Basic.NinzaCRMWithTestngMethod@30c15d8b]" started-at="2025-03-29T21:06:26 IST" name="afterClass" finished-at="2025-03-29T21:06:27 IST" duration-ms="1017" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:Basic.NinzaCRMWithTestngMethod@30c15d8b]" started-at="2025-03-29T21:06:27 IST" name="afterTest" finished-at="2025-03-29T21:06:27 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method is-config="true" signature="afterSuite()[pri:0, instance:Basic.NinzaCRMWithTestngMethod@30c15d8b]" started-at="2025-03-29T21:06:29 IST" name="afterSuite" finished-at="2025-03-29T21:06:29 IST" duration-ms="4" status="FAIL">
+    <test started-at="2025-04-02T16:27:22 IST" name="Default test" finished-at="2025-04-02T16:27:24 IST" duration-ms="1614">
+      <class name="ProductTest.ProductTestNG">
+        <test-method signature="createProductTest()[pri:0, instance:ProductTest.ProductTestNG@1a482e36]" started-at="2025-04-02T16:27:22 IST" name="createProductTest" finished-at="2025-04-02T16:27:24 IST" duration-ms="1555" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Cannot invoke "java.sql.Connection.close()" because "this.conn" is null]]>
+              <![CDATA[Cannot invoke "org.apache.poi.ss.usermodel.Cell.getStringCellValue()" because the return value of "org.apache.poi.ss.usermodel.Row.getCell(int)" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.conn" is null
-at GenericUtility.DatabaseUtility.closeConnection(DatabaseUtility.java:33)
-at BaseClassUtility.BaseClass.afterSuite(BaseClass.java:186)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.apache.poi.ss.usermodel.Cell.getStringCellValue()" because the return value of "org.apache.poi.ss.usermodel.Row.getCell(int)" is null
+at GenericUtility.ExcelFileUtility.readinDataFromExcelFile(ExcelFileUtility.java:16)
+at ProductTest.ProductTestNG.createProductTest(ProductTestNG.java:60)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
-at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:344)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
 at org.testng.SuiteRunner.run(SuiteRunner.java:276)
 at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
 at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
@@ -94,8 +47,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- Basic.NinzaCRMWithTestngMethod -->
+        </test-method> <!-- createProductTest -->
+      </class> <!-- ProductTest.ProductTestNG -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

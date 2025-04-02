@@ -3,20 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Basic.NinzaCRMWithTestngMethod">
+      <class name="ProductTest.ProductTestNG">
         <methods>
-          <include name="beforeClass"/>
-          <include name="afterTest"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-          <include name="afterClass"/>
-          <include name="afterSuite"/>
-          <include name="createCampaignTest"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="createCampaignWithDateTest"/>
+          <include name="createProductTest"/>
         </methods>
-      </class> <!-- Basic.NinzaCRMWithTestngMethod -->
+      </class> <!-- ProductTest.ProductTestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

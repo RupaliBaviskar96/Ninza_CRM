@@ -24,7 +24,7 @@ public class CreateCampaignWithTestNG
 {
 
 	@Test
-	public void CreateCampaignWithMandatoryField() throws InterruptedException, IOException 
+	public void addCampaignWithMandatoryField() throws InterruptedException, IOException 
 	{
 		PropertiesFileUtility propUtil=new PropertiesFileUtility();
 
@@ -153,7 +153,7 @@ public class CreateCampaignWithTestNG
 	}
 		
 	@Test
-	public void CreateCampaignWithClosedDate()throws IOException, InterruptedException
+	public void addCampaignWithClosedDate()throws IOException, InterruptedException
 	{
 		PropertiesFileUtility propUtil=new PropertiesFileUtility();
 

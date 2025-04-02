@@ -27,7 +27,7 @@ public class CreateContactWithTESTNG
 {
 	
 	@Test
-	public void createContactWithCampaign()throws IOException, InterruptedException {
+	public void addContactWithCampaign()throws IOException, InterruptedException {
 
 		PropertiesFileUtility propUtil=new PropertiesFileUtility();
 

@@ -24,7 +24,7 @@ public class LoginWithTESTNG
 
 		@Test(groups= {"SmokeTest"})
 
-		public void loginTest() throws InterruptedException, IOException {
+		public void addloginTest() throws InterruptedException, IOException {
 
 			PropertiesFileUtility propUtil=new PropertiesFileUtility();
 

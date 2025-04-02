@@ -13,18 +13,17 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
-import GenericUtility.ExcelFileUtility;
 import GenericUtility.FileUtility;
-import GenericUtility.JavaUtility;
+import GenericUtility.PropertiesFileUtility;
 
 public class LoginTest 
 {
 	public static void main(String[] args) throws InterruptedException,IOException,FileNotFoundException
 	{
-		FileUtility FUtil= new FileUtility();
-
+		PropertiesFileUtility FUtil= new PropertiesFileUtility();
+         
 		String BROWSER = FUtil.readingDataFromPropFile("browser");
-
+		System.out.println(BROWSER);
 		String URL = FUtil.readingDataFromPropFile("url");
 
 		String UN = FUtil.readingDataFromPropFile("username");

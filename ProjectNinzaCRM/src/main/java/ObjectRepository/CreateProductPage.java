@@ -49,13 +49,26 @@ public class CreateProductPage
 	private WebElement price1;
 	@FindBy(xpath="//button[text()='Add']")
 	private WebElement AddProductBtn;
-	
-	
-	public void addProduct(String prodName, String quantity, String price)
+	@FindBy(xpath="//select[@name='productCategory']")
+	private WebElement productCtgy;
+	public WebElement getProductCtgy() {
+		return productCtgy;
+	}
+
+
+	public WebElement getVendorname() {
+		return vendorname;
+	}
+
+	@FindBy(xpath="//select[@name='vendorId']")
+	private WebElement vendorname;
+	public void addProduct(String prodName, String quantity, String price,String category,String vendor)
 	{
 		productname.sendKeys(prodName);
 		quantity1.sendKeys(quantity);
 		price1.sendKeys(price);
+		productCtgy.sendKeys(category);
+		vendorname.sendKeys(vendor);
 		AddProductBtn.click();
 	}
 }

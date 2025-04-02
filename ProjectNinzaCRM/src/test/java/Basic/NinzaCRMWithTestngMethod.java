@@ -153,6 +153,10 @@ public class NinzaCRMWithTestngMethod extends BaseClass
 
 		String price = excelUtil.readinDataFromExcelFile("Product", 1, 3);
 
+
+		String category = excelUtil.readinDataFromExcelFile("Product", 1, 4);
+		String vendor = excelUtil.readinDataFromExcelFile("Product", 1, 5);
+
 		
 
 	//	String expectedURL="http://49.249.28.218:8098/dashboard";
@@ -180,7 +184,7 @@ public class NinzaCRMWithTestngMethod extends BaseClass
 
 		CreateProductPage cpp=new CreateProductPage(driver);
 
-		cpp.addProduct(prodName, quantity, price);
+		cpp.addProduct(prodName, quantity, price,category,vendor);
 
 		Thread.sleep(5000);
 
