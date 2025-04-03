@@ -31,7 +31,7 @@ public class JavaUtility
 	public String getRequestDate(int days) 
 	{
 		Date dateObj=new Date();
-		SimpleDateFormat sim=new SimpleDateFormat("dd-MM-YYYY");
+		SimpleDateFormat sim=new SimpleDateFormat("MM-dd-YYYY");
 
 		String todaysDate = sim.format(dateObj);
 

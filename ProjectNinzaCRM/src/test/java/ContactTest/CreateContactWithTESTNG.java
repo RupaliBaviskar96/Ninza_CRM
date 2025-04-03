@@ -127,7 +127,7 @@ public class CreateContactWithTESTNG
 
 		ccp.createCampaignWithmandatoryFields(Campaign, targetSize);
 
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 
 		
 
@@ -157,7 +157,7 @@ public class CreateContactWithTESTNG
 		CreateContactPage cct=new CreateContactPage(driver);
 		Thread.sleep(10000);
 		cct.createContactWithCampaign(organization, title, contactName, mobile, "selectCampaign", "create-contact", Campaign);
-		Thread.sleep(10000);
+		Thread.sleep(5000);
         String ConfMsg = ccp1.getConfMsg().getText();
         
         boolean status = ConfMsg.contains(contactName);
@@ -184,9 +184,9 @@ public class CreateContactWithTESTNG
        Thread.sleep(10000);
 
        dp.logout();
-
+       Thread.sleep(2000);
        driver.quit();
-
+       Thread.sleep(2000);
 	}
 
 }

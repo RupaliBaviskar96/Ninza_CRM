@@ -178,9 +178,9 @@ public class CreateContactWithCampaign
        Thread.sleep(5000);
 
        dp.logout();
-
+       Thread.sleep(2000);
        driver.quit();
-
+       Thread.sleep(2000);
 	}
 
 }

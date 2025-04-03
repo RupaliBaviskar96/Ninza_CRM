@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ProductTest.ProductTestNG">
+      <class name="CampaignTest.CreateCampaignWithTestNG">
         <methods>
-          <include name="createProductTest"/>
+          <include name="addCampaignWithClosedDate"/>
         </methods>
-      </class> <!-- ProductTest.ProductTestNG -->
+      </class> <!-- CampaignTest.CreateCampaignWithTestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

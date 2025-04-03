@@ -37,7 +37,7 @@ public class CampaignsPage
 
 		
 
-		@FindBy(xpath="//div[@role='alert']")
+		@FindBy(xpath="/html/body/div[2]/div/div/div/div[1]")
 
 		private WebElement confMsg;
 		public WebElement getCreateCampaignBtn() 

@@ -23,11 +23,9 @@ public class ProductPage
 		return AddProductBtn;
 	}
 	
-	public WebElement getConfMsg() {
-		// TODO Auto-generated method stub
+	public WebElement getConfMsg() 
+	{
+	 // TODO Auto-generated method stub
 		return confmsg;
 	}
-	
-	
-
 }
