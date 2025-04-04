@@ -1,6 +1,6 @@
 package CampaignTest;
 
-import java.io.IOException; 
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
@@ -16,10 +16,9 @@ import ObjectRepository.CreateCampaignsPage;
 import ObjectRepository.DashboardPage;
 import ObjectRepository.LoginPage;
 
-public class CreateCampaignWithMandatoryField 
+public class CreateCampaignWithClosedDateTest 
 {
-
-	public static void main(String[] args) throws InterruptedException, IOException {
+	public static void main(String[] args) throws IOException, InterruptedException {
 
 		PropertiesFileUtility propUtil=new PropertiesFileUtility();
 
@@ -47,7 +46,11 @@ public class CreateCampaignWithMandatoryField
 
 		
 
-	//	String expectedURL="http://49.249.28.218:8098/dashboard";
+		String closeDate = jUtil.getRequestDate(20);
+
+		System.out.println(closeDate);
+
+		String expectedURL="http://49.249.28.218:8098/dashboard";
 
 		//Launching the browser
 
@@ -110,12 +113,10 @@ public class CreateCampaignWithMandatoryField
 		cp.getCreateCampaignBtn().click();
 
 		CreateCampaignsPage ccp=new CreateCampaignsPage(driver);
-        System.out.println(Campaign);
-        System.out.println(targetSize);
 
-		ccp.createCampaignWithmandatoryFields(Campaign, targetSize);
+		ccp.createCampaignWithCloseDate(Campaign, targetSize,closeDate);
 
-		Thread.sleep(2000);
+		Thread.sleep(20000);
 
 		String ConfMsg = cp.getConfMsg().getText();
 
@@ -142,5 +143,8 @@ public class CreateCampaignWithMandatoryField
         //close the browser
 
         driver.quit();
+
 	}
+
+
 }

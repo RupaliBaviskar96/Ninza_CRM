@@ -1,10 +1,9 @@
-package ContactTest;
+package CampaignTest;
 
-import java.io.IOException;
+import java.io.IOException; 
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -12,18 +11,15 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import GenericUtility.ExcelFileUtility;
 import GenericUtility.JavaUtility;
 import GenericUtility.PropertiesFileUtility;
-import GenericUtility.WebDriverUtility;
 import ObjectRepository.CampaignsPage;
-import ObjectRepository.ContactsPage;
 import ObjectRepository.CreateCampaignsPage;
-import ObjectRepository.CreateContactPage;
 import ObjectRepository.DashboardPage;
 import ObjectRepository.LoginPage;
 
-public class CreateContactWithCampaign
+public class CreateCampaignWithMandatoryFieldTest 
 {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 
 		PropertiesFileUtility propUtil=new PropertiesFileUtility();
 
@@ -35,13 +31,11 @@ public class CreateContactWithCampaign
 
 		String PWD = propUtil.readingDataFromPropFile("password");
 
-		System.out.println(URL);
-		System.out.println(UN);
-		System.out.println(PWD);
+		
 
 		JavaUtility jUtil=new JavaUtility();
 
-		int randomNum = jUtil.getRandomNum(2000);
+		int randomNum = jUtil.getRandomNum(5000);
 
 		
 
@@ -51,15 +45,11 @@ public class CreateContactWithCampaign
 
 		String targetSize = exUtil.readinDataFromExcelFile("DDT", 1, 3);
 
-		String organization = exUtil.readinDataFromExcelFile("Contact", 1, 2)+randomNum;
+		
 
-		String title = exUtil.readinDataFromExcelFile("Contact", 1, 3);
+	//	String expectedURL="http://49.249.28.218:8098/dashboard";
 
-		String contactName = exUtil.readinDataFromExcelFile("Contact", 1, 4)+randomNum;
-
-		String mobile = exUtil.readinDataFromExcelFile("Contact", 1, 5);
-
-        
+		//Launching the browser
 
 		WebDriver driver=null;
 
@@ -99,13 +89,15 @@ public class CreateContactWithCampaign
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
+		//navigating to ninza CRM
+
 		driver.get(URL);
+
+		//enter the username and password
 
 		LoginPage lp=new LoginPage(driver);
 
 		lp.login(UN, PWD);
-
-		
 
 		DashboardPage dp=new DashboardPage(driver);
 
@@ -113,74 +105,42 @@ public class CreateContactWithCampaign
 
 		dp.getCampaignsLink().click();
 
-         CampaignsPage cp=new CampaignsPage(driver);
+		CampaignsPage cp=new CampaignsPage(driver);
 
 		cp.getCreateCampaignBtn().click();
 
-		
-
 		CreateCampaignsPage ccp=new CreateCampaignsPage(driver);
+        System.out.println(Campaign);
+        System.out.println(targetSize);
 
 		ccp.createCampaignWithmandatoryFields(Campaign, targetSize);
 
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
-		
+		String ConfMsg = cp.getConfMsg().getText();
 
-		WebElement contactLink = dp.getContactsLink();
+		if(ConfMsg.contains(Campaign))
 
-		WebDriverUtility Wutil=new WebDriverUtility();
+		{
 
-		Wutil.waitForElementToBeClickable(driver, contactLink,20);
+			System.out.println("campaign "+Campaign+" added successfully");
 
-		contactLink.click();
+		}
 
-		
+		else
 
-		Thread.sleep(5000);
+		{
 
-		ContactsPage ccp1=new ContactsPage(driver);
+			System.out.println("campaign not added");
 
-		WebElement createContactBtn = ccp1.getCreateContactBtn();
+		}
 
-		Wutil.waitForElementToBeClickable(driver, createContactBtn,20);
+		Thread.sleep(4000);
 
-	    createContactBtn.click();
+		dp.logout();
 
-		
+        //close the browser
 
-		CreateContactPage cct=new CreateContactPage(driver);
-
-		cct.createContactWithCampaign(organization, title, contactName, mobile, "selectCampaign", "create-contact", Campaign);
-
-		
-
-		Thread.sleep(5000);
-
-        String ConfirmationMsg = ccp1.getConfMsg().getText();
-
-        if(ConfirmationMsg.contains(contactName))
-
-        {
-
-        	System.out.println("Contact added Successfully");
-
-        }
-
-        else
-
-        {
-
-        	System.out.println("Contact not added");
-
-        }
-
-       Thread.sleep(5000);
-
-       dp.logout();
-       Thread.sleep(2000);
-       driver.quit();
-       Thread.sleep(2000);
+        driver.quit();
 	}
-
 }
