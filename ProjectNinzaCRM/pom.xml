@@ -53,11 +53,7 @@
     <artifactId>selenium-chrome-driver</artifactId>
     <version>4.30.0</version>
 </dependency>
-  	 <dependency>
-  	 	<groupId>Qspiders</groupId>
-  	 	<artifactId>AutomationFramework.A10</artifactId>
-  	 	<version>0.0.1-SNAPSHOT</version>
-  	 </dependency>
+  	
   	 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 <dependency>
     <groupId>com.aventstack</groupId>
